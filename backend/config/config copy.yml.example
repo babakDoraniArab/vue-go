@@ -1,0 +1,28 @@
+app:
+  name: "Blog"
+
+server:
+  host: "0.0.0.0"
+  port: "8080"
+
+# db:
+# # https://freedb.tech/
+#   username: "freedb_go-app-babak"
+#   password: "fhS*NzMju#eEq49"
+#   host: "sql.freedb.tech"
+#   port: "3306"
+#   name: "freedb_go-app-babak"
+
+db:
+  username: "example"
+  password: "example"
+  host: "db"
+  port: "3306"
+  name: "example"
+
+
+# username: dvh
+# password: jxm9Kh2Cxqq56V9VnC1z@6iPbYh0G5BQ
+# rootPassword:
+# iBYiWas3_vrOsyPj97Uc27XhpKvzIminiWDXWb6KqEtTuDBwLkhRSOhEPFhTNEFK
+# db:s
