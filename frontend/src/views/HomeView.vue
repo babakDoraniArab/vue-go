@@ -1,6 +1,6 @@
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
-import Menu from '../components/menu/Menu.vue';
+import Menu from '../components/menu/menu.vue';
 </script>
 
 <template>
