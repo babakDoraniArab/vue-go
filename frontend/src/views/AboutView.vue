@@ -5,7 +5,7 @@ import About from '../components/About.vue';
 </script>
 <template>
   <main>
-    sdf
+    sdffsdf
     <About />
 
   </main>
