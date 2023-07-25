@@ -3,4 +3,4 @@ up:
 down:
 	@docker-compose down
 
-.PHONY: up, down
+.PHONY: up down

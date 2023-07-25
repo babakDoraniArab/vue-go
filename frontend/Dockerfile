@@ -1,12 +1,28 @@
-FROM node:16 as dev
-WORKDIR /usr/src/app/my-app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run dev
+# syntax=docker/dockerfile:1.4
+FROM --platform=$BUILDPLATFORM node:18 AS development
 
-# production stage
-FROM nginx:stable-alpine as production-stage
-COPY --from=dev /app/dist /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+RUN mkdir /project
+WORKDIR /project
+
+COPY . .
+
+# RUN yarn global add @vue/cli
+# RUN yarn install
+RUN npm install @vue/cli -g
+RUN npm install 
+ENV HOST=0.0.0.0
+CMD ["npm", "run", "dev"]
+
+FROM development as dev-envs
+RUN <<EOF
+apk update
+apk add git
+EOF
+
+RUN <<EOF
+addgroup -S docker
+adduser -S --shell /bin/bash --ingroup docker vscode
+EOF
+# install Docker tools (cli, buildx, compose)
+COPY --from=gloursdocker/docker / /
+CMD ["yarn", "run", "serve"]
