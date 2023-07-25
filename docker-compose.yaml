@@ -1,0 +1,14 @@
+  
+version: '3'
+services:
+   vue-ui:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "5173:5173"
+    container_name: vue-ui
+    volumes:
+       - ./frontend:/usr/src/app/frontend 
+       - /usr/src/app/my-app/node_modules
