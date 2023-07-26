@@ -6,8 +6,9 @@ import (
 )
 
 func Routes(router *gin.Engine) {
+	apiV1 := router.Group("/api/v1/")
 
 	dashboardController := dashboardCtrl.New()
-	router.GET("/", dashboardController.Dashboard)
-	router.GET("/test2", dashboardController.Test)
+	apiV1.GET("/", dashboardController.Dashboard)
+	apiV1.GET("/test2", dashboardController.Test)
 }

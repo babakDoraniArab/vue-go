@@ -11,6 +11,7 @@ func RegisterRoutes(router *gin.Engine) {
 
 	// HomeRoutes.Routes(router)
 	// ArticleRoutes.Routes(router)
+
 	UserRoutes.Routes(router)
 	DashboardRoutes.Routes(router)
 
