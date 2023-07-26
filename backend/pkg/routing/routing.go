@@ -2,11 +2,18 @@ package routing
 
 import (
 	"github.com/babakDoraniArab/vue-go/internal/provider/routes"
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
 func Init() {
 	router = gin.Default()
+	router.Use(static.Serve("/", static.LocalFile("./frontend/dist", false)))
+	// dist, err := fs.Sub("../../../frontend/dist")
+	// if err != nil {
+	// 	log.Fatalf("dist file server")
+	// 	return
+	// }
 }
 
 // GetRouter returns the route
