@@ -4,7 +4,7 @@ services:
       context: frontend
       target: development
     ports:
-      - 5174:5174
+      - 5173:5173
     volumes:
       - ./frontend:/project
       - /project/node_modules
