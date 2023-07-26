@@ -11,7 +11,8 @@ COPY . .
 RUN npm install @vue/cli -g
 RUN npm install 
 ENV HOST=0.0.0.0
-CMD ["npm", "run", "dev"]
+# CMD [ "vue", "ui", "--headless" , "--port", "5173",  "--host", "0.0.0.0" ]
+CMD ["npm", "run", "dev", "--host", "0.0.0.0"]
 
 FROM development as dev-envs
 RUN <<EOF

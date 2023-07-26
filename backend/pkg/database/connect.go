@@ -3,18 +3,35 @@ package database
 import (
 	"fmt"
 	"log"
-	"os"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 func Connect() {
-	dbUsername := os.Getenv("DB_USERNAME")
-	dbPassword := os.Getenv("DB_PASSWORD")
-	dbHost := os.Getenv("DB_HOST")
-	dbPort := os.Getenv("DB_PORT")
-	dbName := os.Getenv("DB_NAME")
+	// dbUsername := os.Getenv("DB_USERNAME")
+	// dbPassword := os.Getenv("DB_PASSWORD")
+	// dbHost := os.Getenv("DB_HOST")
+	// dbPort := os.Getenv("DB_PORT")
+	// dbName := os.Getenv("DB_NAME")
+	// fmt.Println("this is the dbUsername:", dbUsername)
+	// fmt.Println("this is the dbPassword:", dbPassword)
+	// fmt.Println("this is the dbHost:", dbHost)
+	// fmt.Println("this is the dbPort:", dbPort)
+	// fmt.Println("this is the dbName:", dbName)
+	// fmt.Println("this is the dbPort:", dbPort)
+	dbUsername := "freedb_gobabak"
+	dbPassword := "AyaRn8%ymVPH!uA"
+	dbHost := "sql.freedb.tech"
+	dbPort := "3306"
+	dbName := "freedb_gobabak"
+	fmt.Println("this is the dbUsername:", dbUsername)
+	fmt.Println("this is the dbPassword:", dbPassword)
+	fmt.Println("this is the dbHost:", dbHost)
+	fmt.Println("this is the dbPort:", dbPort)
+	fmt.Println("this is the dbName:", dbName)
+	fmt.Println("this is the dbPort:", dbPort)
+	//dns="freedb_gobabak":"AyaRn8%ymVPH!uA"@tcp(sql.freedb.tech:3306)/freedb_gobabak?charset=utf8mb4&parseTime=True&loc=Local
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		dbUsername,
 		dbPassword,
