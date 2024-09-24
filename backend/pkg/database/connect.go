@@ -9,22 +9,12 @@ import (
 )
 
 func Connect() {
-	// dbUsername := os.Getenv("DB_USERNAME")
-	// dbPassword := os.Getenv("DB_PASSWORD")
-	// dbHost := os.Getenv("DB_HOST")
-	// dbPort := os.Getenv("DB_PORT")
-	// dbName := os.Getenv("DB_NAME")
-	// fmt.Println("this is the dbUsername:", dbUsername)
-	// fmt.Println("this is the dbPassword:", dbPassword)
-	// fmt.Println("this is the dbHost:", dbHost)
-	// fmt.Println("this is the dbPort:", dbPort)
-	// fmt.Println("this is the dbName:", dbName)
-	// fmt.Println("this is the dbPort:", dbPort)
-	dbUsername := "freedb_gobabak"
-	dbPassword := "AyaRn8%ymVPH!uA"
-	dbHost := "sql.freedb.tech"
+
+	dbUsername := "example"
+	dbPassword := "example"
+	dbHost := "localhost"
 	dbPort := "3306"
-	dbName := "freedb_gobabak"
+	dbName := "example"
 	fmt.Println("this is the dbUsername:", dbUsername)
 	fmt.Println("this is the dbPassword:", dbPassword)
 	fmt.Println("this is the dbHost:", dbHost)
